@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+
+% --- Extra super math ---
+% --- ABC ---
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\Hh}{\mathbb{H}} % "H" is reserved, so use "Hh"
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Ll}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Oo}{\mathbb{O}}
+\newcommand{\Pp}{\mathbb{P}} % "P" is reserved, so use "Pp"
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Ss}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+% --- extra symbols for lazy typing ---
+% --- custom commands
+\newcommand{\e}{\varepsilon}
+\newcommand{\de}{\delta}
+\newcommand{\eo}{\varepsilon > 0}
+\newcommand{\deo}{\delta > 0}
+\newcommand{\ui}{\cup_{i \in I}}
+\newcommand{\und}{\quad \text{ und } \quad}
+\newcommand{\epti}{\tilde{\varepsilon}}
+\newcommand{\limninf}{\lim_{n\to\infty}}
+
+% --- extra packages ---
+\usepackage[T1]{fontenc}
+\usepackage{tgschola}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{newtxtext,newtxmath} % Elegant text and math fonts
+\usepackage{microtype} % Improved spacing and kerning
+\usepackage{xcolor} % Custom colors
+\usepackage{graphicx} % graphics
+\usepackage{mdframed} % For styled theorem boxes
+\usepackage{pgfpages} %Layout
+\usepackage{float} %Layout
+
+% --- end ---
+\begin{document}
