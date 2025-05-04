@@ -34,6 +34,97 @@
 \newcommand{\Y}{\mathbb{Y}}
 \newcommand{\Z}{\mathbb{Z}}
 
+
+
+
+% R
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\Hh}{\mathbb{H}} % "H" is reserved, so use "Hh"
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Ll}{\mathbb{L}} 
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Oo}{\mathbb{O}}
+\newcommand{\Pp}{\mathbb{P}} % "P" is reserved, so use "Pp"
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Ss}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+%
+\newcommand{\om}{\Omega}
+\newcommand{\mA}{\mathcal{A}}
+\newcommand{\mB}{\mathcal{B}}
+\newcommand{\mC}{\mathcal{C}}
+\newcommand{\mD}{\mathcal{D}}
+\newcommand{\mE}{\mathcal{E}}
+\newcommand{\mF}{\mathcal{F}}
+\newcommand{\mG}{\mathcal{G}}
+\newcommand{\mH}{\mathcal{H}}
+\newcommand{\mI}{\mathcal{I}}
+\newcommand{\mJ}{\mathcal{J}}
+\newcommand{\mK}{\mathcal{K}}
+\newcommand{\mL}{\mathcal{L}}
+\newcommand{\mM}{\mathcal{M}}
+\newcommand{\mN}{\mathcal{N}}
+\newcommand{\mO}{\mathcal{O}}
+\newcommand{\mP}{\mathcal{P}}
+\newcommand{\mQ}{\mathcal{Q}}
+\newcommand{\mR}{\mathcal{R}}
+\newcommand{\mS}{\mathcal{S}}
+\newcommand{\mT}{\mathcal{T}}
+\newcommand{\mU}{\mathcal{U}}
+\newcommand{\mV}{\mathcal{V}}
+\newcommand{\mW}{\mathcal{W}}
+\newcommand{\mX}{\mathcal{X}}
+\newcommand{\mY}{\mathcal{Y}}
+\newcommand{\mZ}{\mathcal{Z}}
+
+\newcommand{\fA}{\mathfrak{A}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\fC}{\mathfrak{C}}
+\newcommand{\fD}{\mathfrak{D}}
+\newcommand{\fE}{\mathfrak{E}}
+\newcommand{\fF}{\mathfrak{F}}
+\newcommand{\fG}{\mathfrak{G}}
+\newcommand{\fH}{\mathfrak{H}}
+\newcommand{\fI}{\mathfrak{I}}
+\newcommand{\fJ}{\mathfrak{J}}
+\newcommand{\fK}{\mathfrak{K}}
+\newcommand{\fL}{\mathfrak{L}}
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fN}{\mathfrak{N}}
+\newcommand{\fO}{\mathfrak{O}}
+\newcommand{\fP}{\mathfrak{P}}
+\newcommand{\fQ}{\mathfrak{Q}}
+\newcommand{\fR}{\mathfrak{R}}
+\newcommand{\fS}{\mathfrak{S}}
+\newcommand{\fT}{\mathfrak{T}}
+\newcommand{\fU}{\mathfrak{U}}
+\newcommand{\fV}{\mathfrak{V}}
+\newcommand{\fW}{\mathfrak{W}}
+\newcommand{\fX}{\mathfrak{X}}
+\newcommand{\fY}{\mathfrak{Y}}
+\newcommand{\fZ}{\mathfrak{Z}}
+
+
+
+
+
 % --- extra symbols for lazy typing ---
 % --- custom commands
 \newcommand{\e}{\varepsilon}
@@ -44,6 +135,24 @@
 \newcommand{\und}{\quad \text{ und } \quad}
 \newcommand{\epti}{\tilde{\varepsilon}}
 \newcommand{\limninf}{\lim_{n\to\infty}}
+\newcommand{\mus}{\mu^*}
+\newcommand{\limn}{\lim_{n \to \infty}}
+\newcommand{\limm}{\lim_{m \to \infty}}
+\newcommand{\limk}{\lim_{k \to \infty}}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\pa}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\hespa}[2]{{\dfrac {\partial^2 f}{\partial x_{#1}\partial x_{#2}}} (a)}
+\newcommand{\hespx}[2]{{\dfrac {\partial^2 f}{\partial x_{#1}\partial x_{#2}}} (x)}
+
+\newcommand{\vvv}[3]{#1_{#2}, \dots, #1_{#3}}
+\newcommand{\vvvv}[4]{#1_{#2}, \dots, #4, \dots , #1_{#3}}
+\newcommand{\vvvk}[1]{v_{1}, \dots, #1, \dots, v_{k}}
+\newcommand{\vvn}{v_{1}, \dots, v_{n}}
+\newcommand{\vvi}{v_{1}, \dots, v_{i}}
+\newcommand{\vwn}{w_{1}, \dots, w_{n}}
+\newcommand{\vwi}{w_{1}, \dots, w_{i}}
+\newcommand{\vun}{w_{1}, \dots, w_{n}}
+\newcommand{\vui}{w_{1}, \dots, w_{i}}
 
 % --- extra packages ---
 \usepackage[T1]{fontenc}

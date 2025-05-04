@@ -48,8 +48,10 @@ def find_tex_files(folder_path):
     print(f"Searching for LaTeX files in {folder_path}...")
     tex_files = []
     for root, dirs, files in os.walk(folder_path):
+        if "__MACOSX" in root:
+            continue #skip mac os metadata folder and files 
         for file in files:
-            if file.endswith('.tex'):
+            if file.endswith('.tex') and (not file.startswith("._")):
                 tex_files.append(os.path.join(root, file))
     return tex_files
 
@@ -62,28 +64,29 @@ def get_content(path):
     return text
 
 #------------PROCESSING----------
-#TODO adapt to new layout
-def find_defi_beispiel_maths(text):
-    pattern = r"\\begin\{definition\}(\{\s\S\}*?)\\end\{definition\}(\{\s\S\}*?)\\begin\{beispiel\}(\{\s\S\}*?)\\end\{beispiel\}" # change to \[\] if using square brackets
-    
-    matches = re.findall(pattern, text, re.DOTALL)
-    for match in matches:
-        name_part = match[0].strip()
-        name = re.search(pattern_front, name_part)
-        between_part = match[1].strip()
-        example = match[2].strip().replace("\n", "") 
 
-        if bool(re.search(r'[a-mo-zA-Z]', between_part)):
+def find_defi_beispiel_maths(text):
+    # Match: \begin{definition}{optional name}... \end{definition} ... \begin{beispiel}... \end{beispiel}
+    pattern = r"\\begin\{definition\}(?:\{(.*?)\})?\s*(.*?)\\end\{definition\}\s*\\begin\{beispiel\}\s*(.*?)\\end\{beispiel\}"
+
+    matches = re.findall(pattern, text, re.DOTALL)
+    
+    for match in matches:
+        name = match[0].strip() if match[0] else None
+        definition_content = match[1].strip()
+        example = match[2].strip().replace("\n", "")
+
+        if re.search(r'[a-mo-zA-Z]', definition_content):
             print("Text found between definitions and example...")
         else:
             print("Text not between definitions and example...")
-            if name:
-                name = name.group(1).strip() 
-                for i, maths in enumerate(MATHS):
-                    if maths.get("name") == name: # find card with the same name
-                        maths["example"] = example
-                        print(example, name)
 
+        if name:
+            for i, maths in enumerate(MATHS):
+                if maths.get("name") == name:
+                    maths["example"] = example
+                    print(example, name)
+                    
 def find_matches(type,type_str, text):
     matches = re.findall(type, text, re.DOTALL)
     for match in matches:
@@ -108,9 +111,6 @@ def find_matches(type,type_str, text):
 def process(text):
     print("Processing...")
     find_matches(pattern_definition, "definition", text)
-    #find_matches(pattern_folgerung, "folgerung", text)
-    #find_matches(pattern_lemma, "lemma", text)
-    #find_matches(pattern_proposition, "proposition", text)
     find_matches(pattern_satz, "satz", text)
     find_defi_beispiel_maths(text)
 
